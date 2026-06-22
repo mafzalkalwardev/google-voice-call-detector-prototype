@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Google Voice Call Detection Prototype",
+  "version": "1.0.0",
+  "description": "University prototype that records user-approved call audio and classifies likely call answer state.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "https://voice.google.com/*",
+    "http://localhost:3000/*",
+    "http://127.0.0.1:3000/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Voice Detection Prototype",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://voice.google.com/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

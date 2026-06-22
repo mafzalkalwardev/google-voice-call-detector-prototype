@@ -1,0 +1,168 @@
+/* This file styles both the injected Google Voice panel and the extension popup. */
+
+#gv-call-detection-panel {
+  position: fixed;
+  left: 18px;
+  bottom: 18px;
+  z-index: 2147483647;
+  width: 380px;
+  max-width: calc(100vw - 36px);
+  color: #17202a;
+  background: #ffffff;
+  border: 1px solid #b8c1cc;
+  border-radius: 8px;
+  box-shadow: 0 12px 30px rgba(20, 32, 44, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 13px;
+}
+
+.gvcd-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 12px;
+  border-bottom: 1px solid #e2e7ed;
+}
+
+.gvcd-header strong {
+  display: block;
+  font-size: 14px;
+}
+
+.gvcd-header span {
+  display: block;
+  margin-top: 2px;
+  color: #56616d;
+  font-size: 12px;
+}
+
+#gvcd-collapse {
+  width: 28px;
+  height: 28px;
+  border: 1px solid #b8c1cc;
+  border-radius: 6px;
+  background: #f7f9fb;
+  color: #17202a;
+  cursor: pointer;
+}
+
+#gvcd-body {
+  padding: 12px;
+}
+
+#gv-call-detection-panel.gvcd-collapsed #gvcd-body {
+  display: none;
+}
+
+.gvcd-field {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.gvcd-field span {
+  color: #394552;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.gvcd-field select,
+.gvcd-field input {
+  width: 100%;
+  min-height: 34px;
+  box-sizing: border-box;
+  border: 1px solid #b8c1cc;
+  border-radius: 6px;
+  padding: 6px 8px;
+  color: #17202a;
+  background: #ffffff;
+}
+
+.gvcd-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin: 10px 0 12px;
+}
+
+.gvcd-actions button,
+.gvcd-popup button {
+  min-height: 36px;
+  border: 1px solid #1b6ac9;
+  border-radius: 6px;
+  padding: 7px 10px;
+  color: #ffffff;
+  background: #1b6ac9;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.gvcd-actions button:disabled {
+  border-color: #c5ccd4;
+  background: #d8dde3;
+  color: #687480;
+  cursor: not-allowed;
+}
+
+.gvcd-status-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+}
+
+.gvcd-status-list div {
+  display: grid;
+  gap: 3px;
+}
+
+.gvcd-status-list dt {
+  color: #394552;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.gvcd-status-list dd {
+  max-height: 80px;
+  margin: 0;
+  overflow: auto;
+  color: #17202a;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+#gvcd-debug {
+  max-height: 220px;
+  min-height: 96px;
+  padding: 8px;
+  border: 1px solid #c8d2de;
+  border-radius: 6px;
+  background: #f7f9fb;
+  white-space: pre-wrap;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.gvcd-popup {
+  width: 300px;
+  margin: 0;
+  color: #17202a;
+  background: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.gvcd-popup main {
+  padding: 14px;
+}
+
+.gvcd-popup h1 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.gvcd-popup p {
+  margin: 10px 0 0;
+  color: #56616d;
+  line-height: 1.4;
+}

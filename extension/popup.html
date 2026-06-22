@@ -1,0 +1,29 @@
+<!-- This file provides a small extension popup for backend configuration and basic usage status. -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Voice Detection Prototype</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body class="gvcd-popup">
+    <main>
+      <h1>Call Detector</h1>
+      <label class="gvcd-field">
+        <span>Backend URL</span>
+        <input id="backend-url" type="url" value="http://localhost:3100">
+      </label>
+      <label class="gvcd-field">
+        <span>Duration</span>
+        <select id="duration">
+          <option value="5">5 seconds</option>
+          <option value="10">10 seconds</option>
+        </select>
+      </label>
+      <button id="save-settings" type="button">Save Settings</button>
+      <p id="popup-status">Open Google Voice to use the floating panel.</p>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

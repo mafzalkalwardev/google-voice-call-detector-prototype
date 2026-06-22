@@ -1,0 +1,16 @@
+# Local dependency installs and generated files.
+node_modules/
+backend/node_modules/
+
+# Local secrets and machine-specific configuration.
+.env
+backend/.env
+
+# Runtime uploads are deleted after processing; keep only the placeholder directory file.
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Logs and OS/editor noise.
+*.log
+.DS_Store
+Thumbs.db
